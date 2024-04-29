@@ -1,0 +1,40 @@
+No Amazon Redshift, "diskkey" e "sortkey" referem-se a dois conceitos importantes 
+relacionados à otimização de desempenho em bancos de dados distribuídos:
+
+Distkey (Chave de Distribuição):  A chave de distribuição (distkey) em uma tabela
+no Amazon Redshift é a coluna usada para determinar como os dados serão distribuídos 
+entre os nós de computação. Quando você cria uma tabela no Redshift, pode especificar 
+uma coluna como distkey. Os dados serão distribuídos entre os nós de acordo com os valores 
+nesta coluna. Escolher uma chave de distribuição apropriada é fundamental para garantir que 
+os dados sejam distribuídos de forma equilibrada entre os nós e que as consultas sejam executadas 
+de forma eficiente, minimizando a movimentação de dados entre os nós.
+
+Sortkey (Chave de Ordenação): A chave de ordenação (sortkey) em uma tabela no Amazon Redshift
+é a coluna ou conjunto de colunas usadas para ordenar os dados dentro de cada bloco de dados
+em cada nó. Quando você especifica uma chave de ordenação ao criar uma tabela, o Redshift 
+organiza fisicamente os dados em ordem de acordo com os valores nesta coluna ou conjunto
+de colunas. Isso pode melhorar significativamente o desempenho das consultas, especialmente 
+aquelas que envolvem operações de filtro ou junção, pois permite que o Redshift realize operações
+como eliminação de blocos de dados desnecessários e operações de junção baseadas em fusões de intercalação.
+
+Caso de estudo: Suponha que você tenha uma tabela chamada "vendas" que armazena informações sobre transações de vendas em uma loja. 
+A tabela "vendas" possui as seguintes colunas:
+
+id_venda: Identificador único da venda.
+id_produto: Identificador do produto vendido.
+id_cliente: Identificador do cliente que realizou a compra.
+data_venda: Data da venda.
+valor: Valor total da venda.
+
+Aplicando o conceito de distkey e sortkey a esta tabela:
+
+Distkey (Chave de Distribuição):
+Suponha que as consultas mais comuns em sua aplicação geralmente envolvem filtragem ou agregação por id_cliente, 
+já que você deseja analisar o comportamento de compra de cada cliente.
+Neste caso, você poderia definir id_cliente como a distkey. Isso fará com que os dados sejam distribuídos entre 
+os nós com base nos valores de id_cliente, facilitando consultas que envolvam filtragem ou agregação por cliente.
+
+Sortkey (Chave de Ordenação):
+Se você frequentemente realiza consultas que envolvem ordenação ou filtragem por data_venda, faz sentido definir 
+data_venda como a sortkey.Isso permitirá que o Redshift organize fisicamente os dados dentro de cada bloco de dados 
+em ordem de data de venda, facilitando consultas que envolvem filtragem ou ordenação por data.

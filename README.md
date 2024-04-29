@@ -7,7 +7,7 @@ Um data warehouse é um sistema de armazenamento de dados projetado para anális
 
 - **Snowflake**: um data warehouse nativo da nuvem que oferece escalabilidade, segurança e desempenho sem a necessidade de gerenciar infraestrutura física. Utiliza uma arquitetura de banco de dados em nuvem que separa o armazenamento de dados do processamento de consultas, permitindo escalabilidade independente.
   
-- **Redshift**: um data warehouse baseado em nuvem que permite armazenar e analisar grandes volumes de dados usando SQL. Utiliza uma arquitetura em cluster massivamente paralela para processar consultas de forma rápida e eficiente, permitindo análises em tempo real e escalabilidade.
+- **Amazon Redshift**: um data warehouse baseado em nuvem que permite armazenar e analisar grandes volumes de dados usando SQL. Utiliza uma arquitetura em cluster massivamente paralela para processar consultas de forma rápida e eficiente, permitindo análises em tempo real e escalabilidade.
 
 - **BigQuery**: um serviço de data warehouse baseado em nuvem que permite armazenar e analisar grandes volumes de dados usando SQL. Utiliza uma arquitetura de processamento em coluna para consultas rápidas e escaláveis em grandes conjuntos de dados.
 
