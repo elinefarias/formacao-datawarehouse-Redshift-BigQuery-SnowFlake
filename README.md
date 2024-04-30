@@ -24,3 +24,26 @@ Um data warehouse é um sistema de armazenamento de dados projetado para anális
 - Fundamentos e aplicações em Snowflake, incluindo Virtualwarehouse, cache, clustering, views, time travel, fail-safe, tasks e mais.
 
 - Criação de um projeto prático: carga de dados do staging de forma incremental para um Data Warehouse, utilizando CDC, streams e tasks.
+
+### Os tipos da linguagem SQL são:
+<ul>
+  <li><strong>DDL</strong> - Linguagem de Definição de Dados (Data Definition Language).</li>
+  <p>Estes comandos interagem com os objetos do banco.</p>
+  <p>Comandos DDL: CREATE, ALTER e DROP.</p>
+
+  <li><strong>DML</strong> - Linguagem de Manipulação de Dados (Data Manipulation Language).</li>
+  <p>Estes comandos interagem com os dados dentro das tabelas.</p>
+  <p>Comandos DML: INSERT, DELETE e UPDATE.</p>
+
+  <li><strong>DQL</strong> - Linguagem de Consulta de Dados (Data Query Language).</li>
+  <p>Estes são comandos de consulta.</p>
+  <p>Comando DQL: SELECT (às vezes agrupado na DML, dependendo da fonte).</p>
+
+  <li><strong>DTL</strong> - Linguagem de Transação de Dados (Data Transaction Language).</li>
+  <p>Estes comandos controlam as transações.</p>
+  <p>Comandos DTL: BEGIN TRANSACTION, COMMIT e ROLLBACK.</p>
+
+  <li><strong>DCL</strong> - Linguagem de Controle de Dados (Data Control Language).</li>
+  <p>Estes comandos controlam a segurança do banco de dados.</p>
+  <p>Comandos DCL: GRANT, REVOKE e DENY.</p>
+</ul>
